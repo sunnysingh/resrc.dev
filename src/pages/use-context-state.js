@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Heading, Text, Image } from '@chakra-ui/core';
+import { Flex, Heading, Text, Image } from '@chakra-ui/core';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';
@@ -9,7 +9,13 @@ import useContextStateIcon from '../images/use-context-state-icon.png';
 function Intro() {
   return (
     <Flex mb={32} align="center" direction="column">
-      <Image mb={4} src={useContextStateIcon} width="96px" alt="" />
+      <Image
+        mb={4}
+        src={useContextStateIcon}
+        width="96px"
+        height="96px"
+        alt=""
+      />
       <Heading as="h1" size="2xl" paddingBottom={8}>
         use-context-state
       </Heading>

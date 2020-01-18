@@ -1,13 +1,22 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import { Flex, Heading, Box, Stack, Text, Button } from '@chakra-ui/core';
+import {
+  Flex,
+  Heading,
+  Box,
+  Stack,
+  Text,
+  Button,
+  Alert,
+  AlertIcon,
+} from '@chakra-ui/core';
 
 import Layout from '../../components/Layout';
 import Metadata from '../../components/Metadata';
 
 function Intro() {
   return (
-    <Flex align="center" direction="column">
+    <Flex mb={8} align="center" direction="column">
       <Heading as="h1" size="2xl">
         Libraries
       </Heading>
@@ -20,6 +29,10 @@ export default function LibrariesPage() {
     <Layout>
       <Metadata />
       <Intro />
+      <Alert maxWidth="lg" status="info">
+        <AlertIcon />
+        Resrc is a work in progress. More resources coming soon!
+      </Alert>
       <Box pt={8}>
         <Heading as="h2" mb={4}>
           React
