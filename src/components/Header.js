@@ -9,7 +9,11 @@ export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={colorMode === 'dark' ? 'background' : 'white'} w="100%" p={4}>
+    <Box
+      bg={!colorMode || colorMode === 'dark' ? 'background' : 'white'}
+      w="100%"
+      p={4}
+    >
       <Flex>
         <div>
           <GatsbyLink to="/">
