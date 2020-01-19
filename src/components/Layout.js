@@ -14,8 +14,9 @@ import theme from '../config/theme';
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
-      <ColorModeProvider colorMode="dark">
+      <ColorModeProvider>
         <Header />
+
         <Box p={8} borderTop="3px solid #242424">
           <Box as="main" paddingBottom={32}>
             {children}
