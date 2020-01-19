@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Heading, Text, Image } from '@chakra-ui/core';
+import { Box, Flex, Heading, Text, Image } from '@chakra-ui/core';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';
@@ -27,9 +27,17 @@ function Intro() {
 export default function UseContextStatePage() {
   return (
     <Layout>
-      <Metadata />
+      <Metadata title="use-context-state" />
       <Intro />
-      <Text textAlign="center">Coming soon...</Text>
+      <Box mx="auto" maxWidth="960px">
+        <Heading as="h2" mb={4}>
+          <span role="img" aria-label="">
+            😕
+          </span>{' '}
+          Why another state management library?
+        </Heading>
+        <Text mb={8}>The reason is...</Text>
+      </Box>
     </Layout>
   );
 }

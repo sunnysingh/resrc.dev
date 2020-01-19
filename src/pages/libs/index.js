@@ -27,7 +27,7 @@ function Intro() {
 export default function LibrariesPage() {
   return (
     <Layout>
-      <Metadata />
+      <Metadata title="Libraries" />
       <Intro />
       <Alert maxWidth="lg" status="info">
         <AlertIcon />
