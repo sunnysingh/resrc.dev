@@ -9,4 +9,5 @@ Resources for software development.
 Resrc is built with [Gastby](https://gatsbyjs.org/).
 
 1. Install dependencies: `yarn install`
-2. Launch server: `yarn dev`
+2. Copy env: `cp example.env .env` (set API keys in `.env`)
+3. Launch server: `yarn dev`

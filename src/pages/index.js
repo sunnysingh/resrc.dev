@@ -68,27 +68,21 @@ function Illustration() {
   );
 }
 
-function Intro() {
-  return (
-    <Flex align="center" direction="column">
-      <Heading as="h1" size="2xl" textAlign="center" paddingBottom={8}>
-        Software Development Resources
-      </Heading>
-      <Button mb={8} as={Link} to="/libs" variant="outline" size="lg">
-        Explore libraries
-      </Button>
-      <Box width="700px" maxWidth="100%">
-        <Illustration />
-      </Box>
-    </Flex>
-  );
-}
-
 export default function HomePage() {
   return (
     <Layout>
       <Metadata />
-      <Intro />
+      <Flex align="center" direction="column">
+        <Heading as="h1" size="xl" textAlign="center" paddingBottom={8}>
+          Software Development Resources
+        </Heading>
+        <Button mb={16} as={Link} to="/categories" variant="outline" size="lg">
+          Find a resrc
+        </Button>
+        <Box width="700px" maxWidth="100%">
+          <Illustration />
+        </Box>
+      </Flex>
     </Layout>
   );
 }
