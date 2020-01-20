@@ -1,21 +1,22 @@
 import React from 'react';
-import { Flex, Heading, Box, Stack, Text, Image } from '@chakra-ui/core';
+import { Flex, Heading, Box, SimpleGrid, Text, Image } from '@chakra-ui/core';
 
 import Layout from './Layout';
 import Metadata from './Metadata';
 
-export default function ResourcePage({ pageContext }) {
+export default function ResourceLayout({ pageContext }) {
   const { items, category } = pageContext;
   return (
     <Layout>
       <Metadata title={category} />
+
       <Flex mb={8} align="center" direction="column">
         <Heading as="h1" size="xl">
           {category} Resources
         </Heading>
       </Flex>
 
-      <Stack spacing={8} direction="row">
+      <SimpleGrid minChildWidth="250px" spacing={4}>
         {items.map(item => (
           <Box
             key={item.url}
@@ -24,12 +25,17 @@ export default function ResourcePage({ pageContext }) {
             target="_blank"
             rel="noopener"
             p={8}
-            maxW="md"
             borderWidth="1px"
             rounded="lg"
           >
-            <Flex mb={4} justify="center">
-              <Image src={item.image} alt="" height="140px" />
+            <Flex
+              mb={4}
+              overflow="hidden"
+              height="160px"
+              align="center"
+              justify="center"
+            >
+              <Image src={item.image} alt="" />
             </Flex>
 
             <Heading as="h3" mb={4}>
@@ -39,7 +45,7 @@ export default function ResourcePage({ pageContext }) {
             <Text>{item.description}</Text>
           </Box>
         ))}
-      </Stack>
+      </SimpleGrid>
     </Layout>
   );
 }

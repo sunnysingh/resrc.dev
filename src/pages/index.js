@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { Box, Flex, Heading, Button } from '@chakra-ui/core';
+import { Link as GatsbyLink } from 'gatsby';
+import { Box, Flex, Heading, Button, Link } from '@chakra-ui/core';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';
@@ -73,10 +73,19 @@ export default function HomePage() {
     <Layout>
       <Metadata />
       <Flex align="center" direction="column">
-        <Heading as="h1" size="xl" textAlign="center" paddingBottom={8}>
+        <Heading as="h1" size="xl" textAlign="center" pb={8}>
           Software Development Resources
         </Heading>
-        <Button mb={16} as={Link} to="/categories" variant="outline" size="lg">
+        <Heading as="h2" size="lg" pb={8}>
+          <Link href="https://sunnysingh.io/">Curated by Sunny Singh</Link>
+        </Heading>
+        <Button
+          mb={16}
+          as={GatsbyLink}
+          to="/categories"
+          variant="outline"
+          size="lg"
+        >
           Find a resrc
         </Button>
         <Box width="700px" maxWidth="100%">

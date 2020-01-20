@@ -1,4 +1,4 @@
-import { DiReact, DiNext, DiJavascript, DiNodejs } from 'react-icons/di';
+import { DiReact, DiJavascript, DiNodejs } from 'react-icons/di';
 import {
   GiPalette,
   GiTalk,
@@ -21,8 +21,7 @@ export default [
   },
   {
     name: 'Next.js',
-    url: '/nextjs',
-    icon: DiNext,
+    url: '/next-js',
     image: NextjsLogo,
   },
   {
@@ -38,7 +37,7 @@ export default [
   },
   {
     name: 'Node.js',
-    url: '/nodejs',
+    url: '/node-js',
     icon: DiNodejs,
     color: '#3C873A',
   },

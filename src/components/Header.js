@@ -21,8 +21,8 @@ export default function Header() {
           </GatsbyLink>
         </div>
         <Flex bg="transparent" align="center" p={4} marginLeft="auto">
-          <Link as={GatsbyLink} to="/libs" fontSize="2xl">
-            Libraries
+          <Link as={GatsbyLink} to="/categories" fontSize="2xl">
+            Explore
           </Link>
           <IconButton
             ml={8}
