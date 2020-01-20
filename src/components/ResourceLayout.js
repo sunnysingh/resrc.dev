@@ -16,7 +16,7 @@ export default function ResourceLayout({ pageContext }) {
         </Heading>
       </Flex>
 
-      <SimpleGrid minChildWidth="250px" spacing={4}>
+      <SimpleGrid minChildWidth="400px" spacing={4}>
         {items.map(item => (
           <Box
             key={item.url}

@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <Box
-      bg={!colorMode || colorMode === 'dark' ? 'background' : 'white'}
+      bg={!colorMode || colorMode === 'dark' ? '#15171a' : 'white'}
       w="100%"
       p={4}
     >
