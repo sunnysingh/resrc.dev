@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Flex,
-  Heading,
-  Box,
-  Stack,
-  Text,
-  Button,
-  Image,
-} from '@chakra-ui/core';
+import { Flex, Heading, Box, Stack, Text, Image } from '@chakra-ui/core';
 
 import Layout from './Layout';
 import Metadata from './Metadata';
