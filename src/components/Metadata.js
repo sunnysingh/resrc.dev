@@ -50,11 +50,23 @@ export default function Metadata({ description, lang, meta, title }) {
         },
         {
           property: 'og:image',
-          content: previewImage,
+          content: `https://resrc.dev${previewImage}`,
+        },
+        {
+          property: 'og:image:width',
+          content: '1200',
+        },
+        {
+          property: 'og:image:height',
+          content: '628',
         },
         {
           name: 'twitter:card',
           content: 'summary',
+        },
+        {
+          name: 'twitter:title',
+          content: title || site.siteMetadata.title,
         },
         {
           name: 'twitter:creator',
@@ -69,8 +81,8 @@ export default function Metadata({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          property: 'twitter:image',
-          content: previewImage,
+          name: 'twitter:image',
+          content: `https://resrc.dev${previewImage}`,
         },
       ].concat(meta)}
     />

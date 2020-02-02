@@ -83,7 +83,7 @@ export default function HomePage() {
           mb={16}
           as={GatsbyLink}
           to="/categories"
-          variant="outline"
+          variant="solid"
           size="lg"
         >
           Find a resrc

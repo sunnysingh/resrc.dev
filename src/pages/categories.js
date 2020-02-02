@@ -14,7 +14,7 @@ export default function CategoriesPage() {
 
       <Flex mb={8} align="center" direction="column">
         <Heading as="h1" size="xl">
-          Explore
+          Find a resrc
         </Heading>
       </Flex>
 
