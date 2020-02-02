@@ -9,7 +9,7 @@ export default function Layout({ children }) {
     <>
       <Header />
 
-      <Box p={8} borderTop="2px solid #242424">
+      <Box p={[4, 8]} borderTop="2px solid #242424">
         <Box as="main" paddingBottom={24}>
           {children}
         </Box>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import { Flex, Heading, Box, Stack, Image } from '@chakra-ui/core';
+import { Flex, Heading, Box, SimpleGrid, Image } from '@chakra-ui/core';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';
@@ -12,29 +12,19 @@ export default function CategoriesPage() {
     <Layout>
       <Metadata title="Categories" />
 
-      <Flex mb={8} align="center" direction="column">
+      <Flex mb={[4, 8]} align="center" direction="column">
         <Heading as="h1" size="xl">
           Find a resrc
         </Heading>
       </Flex>
 
-      <Stack
-        mx="auto"
-        maxWidth="1280px"
-        spacing={8}
-        direction="row"
-        wrap="wrap"
-        justify="center"
-        mt={-8}
-      >
+      <SimpleGrid minChildWidth="280px" spacing={4}>
         {categories.map(category => (
           <Box
             key={category.url}
             as={GatsbyLink}
             to={category.url}
-            mt={8}
-            p={8}
-            width="sm"
+            p={4}
             borderWidth="1px"
             rounded="lg"
           >
@@ -53,9 +43,7 @@ export default function CategoriesPage() {
             </Flex>
           </Box>
         ))}
-        {/* Hack to get items to align properly */}
-        <div />
-      </Stack>
+      </SimpleGrid>
     </Layout>
   );
 }

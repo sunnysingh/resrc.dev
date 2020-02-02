@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import { Box, Flex, Heading, Button, Link } from '@chakra-ui/core';
+import { Box, Flex, Heading, Link } from '@chakra-ui/core';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';

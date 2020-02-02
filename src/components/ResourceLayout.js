@@ -13,13 +13,13 @@ export default function ResourceLayout({ pageContext }) {
         description={`Software development resources related to ${category}`}
       />
 
-      <Flex mb={8} align="center" direction="column">
+      <Flex mb={[4, 8]} align="center" direction="column">
         <Heading as="h1" size="xl">
           {category} Resources
         </Heading>
       </Flex>
 
-      <SimpleGrid minChildWidth="400px" spacing={4}>
+      <SimpleGrid minChildWidth="280px" spacing={4}>
         {items.map(item => (
           <Box
             key={item.url}
@@ -27,7 +27,7 @@ export default function ResourceLayout({ pageContext }) {
             href={item.url}
             target="_blank"
             rel="noopener"
-            p={8}
+            p={[3, 4]}
             borderWidth="1px"
             rounded="lg"
           >

@@ -32,12 +32,12 @@ export default function Header() {
             <Logo />
           </GatsbyLink>
         </div>
-        <Flex bg="transparent" align="center" p={4} marginLeft="auto">
+        <Flex bg="transparent" align="center" p={[2, 4]} marginLeft="auto">
           <Link as={GatsbyLink} to="/categories" fontSize="2xl">
             Explore
           </Link>
           <IconButton
-            ml={8}
+            ml={[6, 8]}
             variant="outline"
             size="lg"
             onClick={toggleColorMode}
