@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import previewImage from '../images/resrc-preview.png';
+
 export default function Metadata({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -47,6 +49,10 @@ export default function Metadata({ description, lang, meta, title }) {
           content: 'website',
         },
         {
+          property: 'og:image',
+          content: previewImage,
+        },
+        {
           name: 'twitter:card',
           content: 'summary',
         },
@@ -61,6 +67,10 @@ export default function Metadata({ description, lang, meta, title }) {
         {
           name: 'twitter:description',
           content: metaDescription,
+        },
+        {
+          property: 'twitter:image',
+          content: previewImage,
         },
       ].concat(meta)}
     />

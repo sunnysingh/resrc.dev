@@ -8,7 +8,10 @@ export default function ResourceLayout({ pageContext }) {
   const { items, category } = pageContext;
   return (
     <Layout>
-      <Metadata title={category} />
+      <Metadata
+        title={`${category} Resources`}
+        description={`Software development resources related to ${category}`}
+      />
 
       <Flex mb={8} align="center" direction="column">
         <Heading as="h1" size="xl">
