@@ -11,12 +11,21 @@ import {
 import { FiMoon, FiSun } from 'react-icons/fi';
 
 import Logo from './Logo';
+import MaxWidthContainer from './MaxWidthContainer';
 
 const Container = ({ children }) => {
   return (
     <DarkMode>
-      <Box color="white" bg="#15171a" w="100%" p={4}>
-        {children}
+      <Box
+        color="white"
+        bg="#15171a"
+        w="100%"
+        py={4}
+        borderBottom="2px solid #242424"
+      >
+        <MaxWidthContainer>
+          <Box px={[4, 8]}>{children}</Box>
+        </MaxWidthContainer>
       </Box>
     </DarkMode>
   );
