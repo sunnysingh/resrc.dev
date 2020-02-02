@@ -73,10 +73,6 @@ export default function Metadata({ description, lang, meta, title }) {
           content: site.siteMetadata.author,
         },
         {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
           name: 'twitter:description',
           content: metaDescription,
         },
