@@ -16,10 +16,22 @@ export default function Layout({ children }) {
 
         <Box as="footer" textAlign="center">
           <Text>
-            © {new Date().getFullYear()} Resrc, A project by{' '}
+            © {new Date().getFullYear()} Resrc, a project by{' '}
             <Link href="https://sunnysingh.io/" textDecoration="underline">
               Sunny Singh
             </Link>
+            . Powered by{' '}
+            <Link
+              href="https://airtable.com/shrXyWRSOlVFZe2Mt"
+              textDecoration="underline"
+            >
+              Airtable
+            </Link>{' '}
+            and{' '}
+            <Link href="https://www.gatsbyjs.org/" textDecoration="underline">
+              Gatsby
+            </Link>
+            .
           </Text>
         </Box>
       </Box>

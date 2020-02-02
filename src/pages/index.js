@@ -79,15 +79,21 @@ export default function HomePage() {
         <Heading as="h2" size="lg" pb={8}>
           <Link href="https://sunnysingh.io/">Curated by Sunny Singh</Link>
         </Heading>
-        <Button
+        <Box
+          d="inline-block"
           mb={16}
+          py={4}
+          px={8}
+          color="white"
+          bg="gray.900"
+          fontWeight="bold"
+          borderWidth="1px"
+          rounded="lg"
           as={GatsbyLink}
           to="/categories"
-          variant="outline"
-          size="lg"
         >
           Find a resrc
-        </Button>
+        </Box>
         <Box width="700px" maxWidth="100%">
           <Illustration />
         </Box>
