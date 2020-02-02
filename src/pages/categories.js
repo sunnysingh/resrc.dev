@@ -24,7 +24,7 @@ export default function CategoriesPage() {
             key={category.url}
             as={GatsbyLink}
             to={category.url}
-            p={4}
+            p={[4, 8]}
             borderWidth="1px"
             rounded="lg"
           >

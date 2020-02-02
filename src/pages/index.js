@@ -72,13 +72,16 @@ export default function HomePage() {
   return (
     <Layout>
       <Metadata />
+
       <Flex align="center" direction="column">
         <Heading as="h1" size="xl" textAlign="center" pb={8}>
           Software Development Resources
         </Heading>
+
         <Heading as="h2" size="lg" pb={8}>
           <Link href="https://sunnysingh.io/">Curated by Sunny Singh</Link>
         </Heading>
+
         <Box
           d="inline-block"
           mb={16}
@@ -94,6 +97,7 @@ export default function HomePage() {
         >
           Find a resrc
         </Box>
+
         <Box width="700px" maxWidth="100%">
           <Illustration />
         </Box>

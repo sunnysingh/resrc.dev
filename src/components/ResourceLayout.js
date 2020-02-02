@@ -27,7 +27,7 @@ export default function ResourceLayout({ pageContext }) {
             href={item.url}
             target="_blank"
             rel="noopener"
-            p={[3, 4]}
+            p={[4, 8]}
             borderWidth="1px"
             rounded="lg"
           >
