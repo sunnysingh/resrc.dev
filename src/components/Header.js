@@ -35,7 +35,7 @@ export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Container>
-      <Flex direction={['column', 'row']} align={['center', 'flex-start']}>
+      <Flex direction={['column', 'row']} align="center">
         <div>
           <GatsbyLink to="/">
             <Logo />
