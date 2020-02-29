@@ -1,14 +1,14 @@
-<center>
+<p align="center">
 
-<a href="https://resrc.dev/">
-  <img src="./src/images/resrc-preview.png" alt="Resrc" width="300" />
-</a>
+  <a href="https://resrc.dev/">
+    <img src="./src/images/resrc-preview.png" alt="Resrc" width="300" />
+  </a>
 
-**Software Development Resources**
+  **Software Development Resources**
 
-Curated by [Sunny Singh](https://sunnysingh.io/)
+  Curated by [Sunny Singh](https://sunnysingh.io/)
 
-</center>
+</p>
 
 ---
 
