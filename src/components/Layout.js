@@ -22,16 +22,12 @@ export default function Layout({ children }) {
               <Link href="https://sunnysingh.io/" textDecoration="underline">
                 Sunny Singh
               </Link>
-              . Powered by{' '}
+              . Open sourced{' '}
               <Link
-                href="https://airtable.com/shrXyWRSOlVFZe2Mt"
+                href="https://github.com/sunnysingh/resrc.dev"
                 textDecoration="underline"
               >
-                Airtable
-              </Link>{' '}
-              and{' '}
-              <Link href="https://www.gatsbyjs.org/" textDecoration="underline">
-                Gatsby
+                on GitHub
               </Link>
               .
             </Text>
