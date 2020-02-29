@@ -8,7 +8,7 @@
 
 <p align="center"><strong>Software Development Resources</strong></p>
 
-<p align="center">Curated by [Sunny Singh](https://sunnysingh.io/)</p>
+<p align="center">Curated by <a href="https://sunnysingh.io/">Sunny Singh</a></p>
 
 ---
 
