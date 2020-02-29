@@ -35,13 +35,21 @@ export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Container>
-      <Flex>
+      <Flex direction={['column', 'row']} align={['center', 'flex-start']}>
         <div>
           <GatsbyLink to="/">
             <Logo />
           </GatsbyLink>
         </div>
-        <Flex bg="transparent" align="center" p={[2, 4]} marginLeft="auto">
+        <Flex
+          bg="transparent"
+          align="center"
+          p={[2, 4]}
+          marginLeft={[0, 'auto']}
+        >
+          <Link as={GatsbyLink} to="/recent" fontSize="2xl" mr={[4, 8]}>
+            Recent
+          </Link>
           <Link as={GatsbyLink} to="/categories" fontSize="2xl">
             Explore
           </Link>

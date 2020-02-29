@@ -40,6 +40,7 @@ module.exports = {
           {
             baseId: AIRTABLE_BASE_ID,
             tableName: 'Resources',
+            tableView: 'Recent',
           },
         ],
       },
