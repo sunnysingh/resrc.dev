@@ -50,8 +50,11 @@ export default function Header() {
           <Link as={GatsbyLink} to="/recent" fontSize="2xl" mr={[4, 8]}>
             Recent
           </Link>
-          <Link as={GatsbyLink} to="/categories" fontSize="2xl">
+          <Link as={GatsbyLink} to="/categories" fontSize="2xl" mr={[4, 8]}>
             Explore
+          </Link>
+          <Link href="https://sunny.link/resrcsubmit" fontSize="2xl">
+            Submit
           </Link>
           <IconButton
             ml={[6, 8]}
