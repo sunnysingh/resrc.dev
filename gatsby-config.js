@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'Resrc',
     description: 'Resources for software development',
-    author: '@resrcdev',
+    author: '@sunnysinghio',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
