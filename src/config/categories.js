@@ -11,6 +11,7 @@ import NextjsLogo from '../images/nextjs-logo.png';
 import GatsbyLogo from '../images/gatsby-logo.png';
 import StyledComponentsLogo from '../images/styled-components-logo.png';
 import EmotionLogo from '../images/emotion-logo.png';
+import VsCodeLogo from '../images/vs-code-logo.png';
 
 export default [
   {
@@ -40,6 +41,11 @@ export default [
     url: '/node-js',
     icon: DiNodejs,
     color: '#3C873A',
+  },
+  {
+    name: 'VS Code',
+    url: '/vs-code',
+    image: VsCodeLogo,
   },
   {
     name: 'Styled Components',
