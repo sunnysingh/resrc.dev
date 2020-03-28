@@ -20,7 +20,7 @@ export default function CategoriesPage() {
       </Flex>
 
       <SimpleGrid minChildWidth="280px" spacing={4}>
-        {categories.map(category => (
+        {categories.map((category) => (
           <Box
             key={category.url}
             as={GatsbyLink}

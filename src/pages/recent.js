@@ -41,7 +41,7 @@ export default function RecentPage() {
       </Flex>
 
       <SimpleGrid minChildWidth="280px" spacing={4}>
-        {allAirtable.nodes.map(node => (
+        {allAirtable.nodes.map((node) => (
           <Box
             key={node.data.URL}
             as="a"
