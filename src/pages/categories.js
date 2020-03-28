@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { Flex, Heading, Box, SimpleGrid, Image } from '@chakra-ui/core';
+import FitText from 'react-fittext';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';
@@ -28,9 +29,11 @@ export default function CategoriesPage() {
             borderWidth="1px"
             rounded="lg"
           >
-            <Heading as="h3" mb={4} textAlign="center">
-              {category.name}
-            </Heading>
+            <FitText>
+              <Heading as="h3" mb={4} textAlign="center">
+                {category.name}
+              </Heading>
+            </FitText>
 
             <Flex justify="center" align="center">
               {category.icon && (

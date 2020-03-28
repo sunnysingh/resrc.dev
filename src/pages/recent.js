@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flex, Heading, Box, SimpleGrid, Text, Image } from '@chakra-ui/core';
 import { useStaticQuery, graphql } from 'gatsby';
+import FitText from 'react-fittext';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';
@@ -63,9 +64,11 @@ export default function RecentPage() {
               )}
             </Flex>
 
-            <Heading as="h3" mb={4}>
-              {node.data.Name}
-            </Heading>
+            <FitText>
+              <Heading as="h3" mb={4}>
+                {node.data.Name}
+              </Heading>
+            </FitText>
 
             <Text>{node.data.Description}</Text>
           </Box>

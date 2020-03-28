@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, Heading, Box, SimpleGrid, Text, Image } from '@chakra-ui/core';
+import FitText from 'react-fittext';
 
 import Layout from './Layout';
 import Metadata from './Metadata';
@@ -41,9 +42,11 @@ export default function ResourceLayout({ pageContext }) {
               <Image src={item.image} alt="" />
             </Flex>
 
-            <Heading as="h3" mb={4}>
-              {item.name}
-            </Heading>
+            <FitText>
+              <Heading as="h3" mb={4}>
+                {item.name}
+              </Heading>
+            </FitText>
 
             <Text>{item.description}</Text>
           </Box>
