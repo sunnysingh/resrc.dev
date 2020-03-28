@@ -36,7 +36,7 @@ export default function RecentPage() {
 
       <Flex mb={[4, 8]} align="center" direction="column">
         <Heading as="h1" size="xl" textAlign="center">
-          Recently Added Resources
+          Recently added
         </Heading>
       </Flex>
 
