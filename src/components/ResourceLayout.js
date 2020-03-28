@@ -10,13 +10,13 @@ export default function ResourceLayout({ pageContext }) {
   return (
     <Layout>
       <Metadata
-        title={`${category} Resources`}
+        title={`${category} resources`}
         description={`Software development resources related to ${category}`}
       />
 
       <Flex mb={[4, 8]} align="center" direction="column">
         <Heading as="h1" size="xl">
-          {category} Resources
+          {category} resources
         </Heading>
       </Flex>
 

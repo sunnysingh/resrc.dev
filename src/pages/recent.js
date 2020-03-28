@@ -30,8 +30,8 @@ export default function RecentPage() {
   return (
     <Layout>
       <Metadata
-        title={`Recently Added Resources`}
-        description={`Software development resources recently added to Resrc`}
+        title="Recently added"
+        description="Software development resources recently added to Resrc"
       />
 
       <Flex mb={[4, 8]} align="center" direction="column">
