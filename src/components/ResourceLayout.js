@@ -31,6 +31,7 @@ export default function ResourceLayout({ pageContext }) {
             p={[4, 8]}
             borderWidth="1px"
             rounded="lg"
+            maxWidth="565px"
           >
             <Flex
               mb={4}
