@@ -1,10 +1,21 @@
 import React from 'react';
-import { Flex, Heading, Box, SimpleGrid, Text, Image } from '@chakra-ui/core';
+import {
+  Flex,
+  Heading,
+  Box,
+  SimpleGrid,
+  Text,
+  Image,
+  Avatar,
+  Tag,
+  TagLabel,
+} from '@chakra-ui/core';
 import { useStaticQuery, graphql } from 'gatsby';
 import FitText from 'react-fittext';
 
 import Layout from '../components/Layout';
 import Metadata from '../components/Metadata';
+import categories from '../config/categories';
 
 export default function RecentPage() {
   const { allAirtable } = useStaticQuery(
@@ -52,6 +63,39 @@ export default function RecentPage() {
             borderWidth="1px"
             rounded="lg"
           >
+            <Box mb={2}>
+              {node.data.Category.map((categoryName) => {
+                const category = categories.find(
+                  ({ name }) => name === categoryName
+                );
+
+                return (
+                  <Tag mb={2} rounded="full">
+                    {category.icon && (
+                      <Box
+                        as={category.icon}
+                        size="24px"
+                        ml={-1}
+                        mr={2}
+                        color={category.color}
+                      />
+                    )}
+
+                    {category.image && (
+                      <Avatar
+                        src={category.image}
+                        size="xs"
+                        ml={-1}
+                        mr={2}
+                        background="transparent"
+                      />
+                    )}
+                    <TagLabel>{category.name}</TagLabel>
+                  </Tag>
+                );
+              })}
+            </Box>
+
             <Flex
               mb={4}
               overflow="hidden"
