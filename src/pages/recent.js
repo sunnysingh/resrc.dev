@@ -21,7 +21,7 @@ export default function RecentPage() {
   const { allAirtable } = useStaticQuery(
     graphql`
       query {
-        allAirtable(limit: 28) {
+        allAirtable(limit: 28, sort: { order: DESC, fields: data___Date }) {
           nodes {
             data {
               Category

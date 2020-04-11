@@ -3,7 +3,10 @@ const slugify = require('voca/slugify');
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const results = await graphql(`
     {
-      allAirtable(filter: { table: { eq: "Resources" } }) {
+      allAirtable(
+        filter: { table: { eq: "Resources" } }
+        sort: { order: DESC, fields: data___Date }
+      ) {
         edges {
           node {
             data {
