@@ -70,7 +70,7 @@ export default function RecentPage() {
                 );
 
                 return (
-                  <Tag mb={2} rounded="full">
+                  <Tag mb={2} mr={2} rounded="full">
                     {category.icon && (
                       <Box
                         as={category.icon}
