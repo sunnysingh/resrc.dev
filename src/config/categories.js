@@ -6,6 +6,7 @@ import {
   GiBinoculars,
 } from 'react-icons/gi';
 import { FaTools } from 'react-icons/fa';
+import { GoRepoPush } from 'react-icons/go';
 import {
   ReactJs,
   NextDotJs,
@@ -102,6 +103,12 @@ export default [
     url: '/dev-tools',
     icon: FaTools,
     color: '#3e52a8',
+  },
+  {
+    name: 'CI/CD',
+    url: '/ci-cd',
+    icon: GoRepoPush,
+    color: '#FFEF45',
   },
   {
     name: 'GitHub',
