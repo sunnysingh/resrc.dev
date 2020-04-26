@@ -5,6 +5,7 @@ import {
   GiDatabase,
   GiBinoculars,
 } from 'react-icons/gi';
+import { FaTools } from 'react-icons/fa';
 import {
   ReactJs,
   NextDotJs,
@@ -13,6 +14,7 @@ import {
   NodeDotJs,
   Visualstudiocode,
   StyledComponents,
+  Github,
 } from '@icons-pack/react-simple-icons';
 
 import EmotionLogo from '../images/emotion-logo.png';
@@ -94,5 +96,17 @@ export default [
     url: '/seo',
     icon: GiBinoculars,
     color: '#81B800',
+  },
+  {
+    name: 'Dev Tools',
+    url: '/dev-tools',
+    icon: FaTools,
+    color: '#3e52a8',
+  },
+  {
+    name: 'GitHub',
+    url: '/github',
+    icon: Github,
+    color: '#181717',
   },
 ];
