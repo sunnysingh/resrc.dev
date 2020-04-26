@@ -1,9 +1,2 @@
 [[plugins]]
-package = "netlify-plugin-checklinks"
-
-  [plugins.inputs]
-  checkExternal = true
-  skipPatterns = ["data:image/png;base64"]
-
-[[plugins]]
   package = "netlify-plugin-gatsby-cache"
