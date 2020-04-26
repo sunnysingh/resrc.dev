@@ -3,3 +3,6 @@ package = "netlify-plugin-checklinks"
 
   [plugins.inputs]
   checkExternal = true
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
