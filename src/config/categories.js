@@ -1,4 +1,3 @@
-import { DiReact, DiJavascript, DiNodejs } from 'react-icons/di';
 import {
   GiPalette,
   GiTalk,
@@ -6,51 +5,60 @@ import {
   GiDatabase,
   GiBinoculars,
 } from 'react-icons/gi';
+import {
+  ReactJs,
+  NextDotJs,
+  Gatsby,
+  Javascript,
+  NodeDotJs,
+  Visualstudiocode,
+  StyledComponents,
+} from '@icons-pack/react-simple-icons';
 
-import NextjsLogo from '../images/nextjs-logo.png';
-import GatsbyLogo from '../images/gatsby-logo.png';
-import StyledComponentsLogo from '../images/styled-components-logo.png';
 import EmotionLogo from '../images/emotion-logo.png';
-import VsCodeLogo from '../images/vs-code-logo.png';
 
 export default [
   {
     name: 'React',
     url: '/react',
-    icon: DiReact,
+    icon: ReactJs,
     color: '#61DAFB',
   },
   {
     name: 'Next.js',
     url: '/next-js',
-    image: NextjsLogo,
+    icon: NextDotJs,
+    color: '#000000',
   },
   {
     name: 'Gatsby',
     url: '/gatsby',
-    image: GatsbyLogo,
+    icon: Gatsby,
+    color: '#663399',
   },
   {
     name: 'JavaScript',
     url: '/javascript',
-    icon: DiJavascript,
+    icon: Javascript,
     color: '#F0DB4F',
   },
   {
     name: 'Node.js',
     url: '/node-js',
-    icon: DiNodejs,
-    color: '#3C873A',
+    icon: NodeDotJs,
+    color: '#339933',
   },
   {
     name: 'VS Code',
     url: '/vs-code',
-    image: VsCodeLogo,
+    icon: Visualstudiocode,
+    color: '#007ACC',
   },
   {
     name: 'Styled Components',
     url: '/styled-components',
-    image: StyledComponentsLogo,
+    icon: StyledComponents,
+    color: '#DB7093',
   },
   {
     name: 'Emotion',
@@ -67,24 +75,24 @@ export default [
     name: 'Marketing',
     url: '/marketing',
     icon: GiTalk,
-    color: '#3076b0',
+    color: '#3076B0',
   },
   {
     name: 'Business',
     url: '/business',
     icon: GiSuitcase,
-    color: '#55614f',
+    color: '#576E7A',
   },
   {
     name: 'Database',
     url: '/database',
     icon: GiDatabase,
-    color: '#a32e00',
+    color: '#A32E00',
   },
   {
     name: 'SEO',
     url: '/seo',
     icon: GiBinoculars,
-    color: '#81b800',
+    color: '#81B800',
   },
 ];

@@ -8,6 +8,7 @@
     "@chakra-ui/core": "^0.7.0",
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
+    "@icons-pack/react-simple-icons": "^2.7.1",
     "add": "^2.0.6",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",

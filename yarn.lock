@@ -1036,6 +1036,13 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@icons-pack/react-simple-icons@^2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-2.7.1.tgz#e31dd00db9c9c91301b7d7f4722ccc52958bd4aa"
+  integrity sha512-0w3PatbdlcmKbk7b3/iP7wan9B0DIWceIk41MQYBMoUSHxycvpmpSytjTbt0d2+lAkbSHWy1A3Wb7ZRL3lii4g==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@jimp/bmp@^0.9.8":
   version "0.9.8"
   resolved "https://registry.yarnpkg.com/@jimp/bmp/-/bmp-0.9.8.tgz#5933ab8fb359889bec380b0f7802163374933624"
