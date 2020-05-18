@@ -16,6 +16,7 @@ import {
   Visualstudiocode,
   StyledComponents,
   Github,
+  Eslint,
 } from '@icons-pack/react-simple-icons';
 
 import EmotionLogo from '../images/emotion-logo.png';
@@ -115,5 +116,11 @@ export default [
     url: '/github',
     icon: Github,
     color: '#181717',
+  },
+  {
+    name: 'ESLint',
+    url: '/eslint',
+    icon: Eslint,
+    color: '#4B32C3',
   },
 ];
