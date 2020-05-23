@@ -29,8 +29,11 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   results.data.allAirtable.edges.forEach((edge) => {
     const resrc = edge.node.data;
 
+    if (!resrc.Category) return;
+
     resrc.Category.forEach((category) => {
       if (!pagesByCategory[category]) pagesByCategory[category] = [];
+
       pagesByCategory[category].push({
         name: resrc.Name,
         description: resrc.Description,
