@@ -63,38 +63,40 @@ export default function RecentPage() {
             borderWidth="1px"
             rounded="lg"
           >
-            <Box mb={2}>
-              {node.data.Category.map((categoryName) => {
-                const category = categories.find(
-                  ({ name }) => name === categoryName
-                );
+            {node.data.Category && (
+              <Box mb={2}>
+                {node.data.Category.map((categoryName) => {
+                  const category = categories.find(
+                    ({ name }) => name === categoryName
+                  );
 
-                return (
-                  <Tag mb={2} mr={2} rounded="full">
-                    {category.icon && (
-                      <Box
-                        as={category.icon}
-                        size="24px"
-                        ml={-1}
-                        mr={2}
-                        color={category.color}
-                      />
-                    )}
+                  return (
+                    <Tag mb={2} mr={2} rounded="full">
+                      {category.icon && (
+                        <Box
+                          as={category.icon}
+                          size="24px"
+                          ml={-1}
+                          mr={2}
+                          color={category.color}
+                        />
+                      )}
 
-                    {category.image && (
-                      <Avatar
-                        src={category.image}
-                        size="xs"
-                        ml={-1}
-                        mr={2}
-                        background="transparent"
-                      />
-                    )}
-                    <TagLabel>{category.name}</TagLabel>
-                  </Tag>
-                );
-              })}
-            </Box>
+                      {category.image && (
+                        <Avatar
+                          src={category.image}
+                          size="xs"
+                          ml={-1}
+                          mr={2}
+                          background="transparent"
+                        />
+                      )}
+                      <TagLabel>{category.name}</TagLabel>
+                    </Tag>
+                  );
+                })}
+              </Box>
+            )}
 
             <Flex
               mb={4}
