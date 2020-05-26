@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-fathom',
       options: {
-        trackingUrl: 'penguin.site.app',
+        trackingUrl: 'penguin.sunny.app',
         siteId: 'QDGPYMRN',
         whitelistHostnames: ['resrc.dev', 'www.resrc.dev'],
         embedVersion: 'v2',
