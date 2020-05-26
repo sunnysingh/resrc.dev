@@ -46,9 +46,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-fathom',
       options: {
-        trackingId: 'UA-71822169-2',
+        trackingUrl: 'penguin.site.app',
+        siteId: 'QDGPYMRN',
+        whitelistHostnames: ['resrc.dev', 'www.resrc.dev'],
+        embedVersion: 'v2',
       },
     },
   ],
