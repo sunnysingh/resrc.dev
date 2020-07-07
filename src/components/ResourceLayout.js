@@ -33,7 +33,10 @@ export default function ResourceLayout({ pageContext }) {
           borderWidth="1px"
           rounded="lg"
         >
-          📚 Learn Next.js with a free course from Lee Robinson
+          <span role="img" aria-label="">
+            📚
+          </span>{' '}
+          Learn Next.js with a free course from Lee Robinson
         </Box>
       )}
 
