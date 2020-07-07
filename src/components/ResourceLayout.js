@@ -20,6 +20,23 @@ export default function ResourceLayout({ pageContext }) {
         </Heading>
       </Flex>
 
+      {category === 'Next.js' && (
+        <Box
+          as="a"
+          href="https://masteringnextjs.com/"
+          display="inline-block"
+          mb={[4, 8]}
+          p={[3, 6]}
+          fontWeight="bold"
+          color="white"
+          bg="teal.600"
+          borderWidth="1px"
+          rounded="lg"
+        >
+          📚 Learn Next.js with a free course from Lee Robison
+        </Box>
+      )}
+
       <SimpleGrid minChildWidth="280px" spacing={4}>
         {items.map((item) => (
           <Box
