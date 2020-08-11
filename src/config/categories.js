@@ -4,6 +4,7 @@ import {
   GiSuitcase,
   GiDatabase,
   GiBinoculars,
+  GiSpellBook,
 } from 'react-icons/gi';
 import { FaTools } from 'react-icons/fa';
 import { GoRepoPush } from 'react-icons/go';
@@ -17,11 +18,18 @@ import {
   StyledComponents,
   Github,
   Eslint,
+  Typescript,
 } from '@icons-pack/react-simple-icons';
 
 import EmotionLogo from '../images/emotion-logo.png';
 
 export default [
+  {
+    name: 'Learn',
+    url: '/learn',
+    icon: GiSpellBook,
+    color: '#C7923E',
+  },
   {
     name: 'React',
     url: '/react',
@@ -51,6 +59,12 @@ export default [
     url: '/node-js',
     icon: NodeDotJs,
     color: '#339933',
+  },
+  {
+    name: 'TypeScript',
+    url: '/typescript',
+    icon: Typescript,
+    color: '#3178C6',
   },
   {
     name: 'VS Code',
