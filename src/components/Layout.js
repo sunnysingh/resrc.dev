@@ -5,10 +5,10 @@ import { Box, Text, Link } from '@chakra-ui/core';
 import Header from './Header';
 import MaxWidthContainer from './MaxWidthContainer';
 
-export default function Layout({ children }) {
+export default function Layout({ location, children }) {
   return (
     <>
-      <Header />
+      <Header location={location} />
 
       <MaxWidthContainer>
         <Box p={[4, 8]}>
@@ -40,4 +40,5 @@ export default function Layout({ children }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 };

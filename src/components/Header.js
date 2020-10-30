@@ -31,8 +31,23 @@ const Container = ({ children }) => {
   );
 };
 
-export default function Header() {
+const NavLink = ({ isCurrent, ...otherProps }) => (
+  <Link
+    as={otherProps.to && GatsbyLink}
+    fontSize="2xl"
+    mr={[4, 8]}
+    borderBottom={isCurrent && '1px solid rgba(255, 255, 255, 0.5)'}
+    _hover={{
+      borderBottom: '1px solid white',
+      textDecoration: 'none',
+    }}
+    {...otherProps}
+  />
+);
+
+export default function Header({ location }) {
   const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Container>
       <Flex direction={['column', 'row']} align="center">
@@ -47,15 +62,18 @@ export default function Header() {
           p={[2, 4]}
           marginLeft={[0, 'auto']}
         >
-          <Link as={GatsbyLink} to="/recent" fontSize="2xl" mr={[4, 8]}>
+          <NavLink to="/" fontSize="2xl" isCurrent={location.pathname === '/'}>
             Recent
-          </Link>
-          <Link as={GatsbyLink} to="/categories" fontSize="2xl" mr={[4, 8]}>
+          </NavLink>
+          <NavLink
+            to="/categories"
+            isCurrent={location.pathname === '/categories'}
+          >
             Explore
-          </Link>
-          <Link href="https://sunny.link/resrcsubmit" fontSize="2xl">
+          </NavLink>
+          <NavLink href="https://sunny.link/resrcsubmit" mr={0}>
             Submit
-          </Link>
+          </NavLink>
           <IconButton
             ml={[6, 8]}
             variant="outline"

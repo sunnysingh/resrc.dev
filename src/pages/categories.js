@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import { Flex, Heading, Box, SimpleGrid, Image } from '@chakra-ui/core';
+import { Flex, Heading, Box, SimpleGrid, Image, Link } from '@chakra-ui/core';
 import FitText from 'react-fittext';
 
 import Layout from '../components/Layout';
@@ -8,17 +8,22 @@ import Metadata from '../components/Metadata';
 
 import categories from '../config/categories';
 
-export default function CategoriesPage() {
+export default function CategoriesPage({ location }) {
   return (
-    <Layout>
+    <Layout location={location}>
       <Metadata title="Categories" />
 
-      <Flex mb={[4, 8]} align="center" direction="column">
-        <Heading as="h1" size="xl">
-          Find a resrc
+      <Flex mb={[4, 10]} align="center" direction="column">
+        <Heading as="h1" size="xl" mb={4} textAlign="center">
+          Software Development Resources
+        </Heading>
+        <Heading as="h2" size="md">
+          Recently curated by{' '}
+          <Link href="https://sunnysingh.io/" textDecoration="underline">
+            Sunny Singh
+          </Link>
         </Heading>
       </Flex>
-
       <SimpleGrid minChildWidth="280px" spacing={4}>
         {categories.map((category) => (
           <Box

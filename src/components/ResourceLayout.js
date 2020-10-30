@@ -5,10 +5,11 @@ import FitText from 'react-fittext';
 import Layout from './Layout';
 import Metadata from './Metadata';
 
-export default function ResourceLayout({ pageContext }) {
+export default function ResourceLayout({ location, pageContext }) {
   const { items, category } = pageContext;
+
   return (
-    <Layout>
+    <Layout location={location}>
       <Metadata
         title={`${category} resources`}
         description={`Software development resources related to ${category}`}
@@ -16,7 +17,7 @@ export default function ResourceLayout({ pageContext }) {
 
       <Flex mb={[4, 8]} align="center" direction="column">
         <Heading as="h1" size="xl">
-          {category} resources
+          {category} Resources
         </Heading>
       </Flex>
 
