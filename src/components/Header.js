@@ -33,7 +33,7 @@ const Container = ({ children }) => {
 
 const NavLink = ({ isCurrent, ...otherProps }) => (
   <Link
-    as={otherProps.to && GatsbyLink}
+    as={otherProps.to ? GatsbyLink : 'a'}
     fontSize="2xl"
     mr={[4, 8]}
     borderBottom={isCurrent && '1px solid rgba(255, 255, 255, 0.5)'}
