@@ -15,7 +15,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import FitText from 'react-fittext';
 
 import Layout from '../components/Layout';
-import Metadata from '../components/Metadata';
 import categories from '../config/categories';
 
 export default function RecentPage({ location }) {
