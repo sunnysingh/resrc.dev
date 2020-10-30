@@ -15,6 +15,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import FitText from 'react-fittext';
 
 import Layout from '../components/Layout';
+import Metadata from '../components/Metadata';
 import categories from '../config/categories';
 
 export default function RecentPage({ location }) {
@@ -40,6 +41,8 @@ export default function RecentPage({ location }) {
   );
   return (
     <Layout location={location}>
+      <Metadata />
+
       <Flex mb={[4, 10]} align="center" direction="column">
         <Heading as="h1" size="xl" mb={4} textAlign="center">
           Software Development Resources
