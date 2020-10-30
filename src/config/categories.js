@@ -5,6 +5,7 @@ import {
   GiDatabase,
   GiBinoculars,
   GiSpellBook,
+  GiStripedSun,
 } from 'react-icons/gi';
 import { FaTools } from 'react-icons/fa';
 import { GoRepoPush } from 'react-icons/go';
@@ -88,6 +89,12 @@ export default [
     url: '/design',
     icon: GiPalette,
     color: '#6746b0',
+  },
+  {
+    name: 'Inspiration',
+    url: '/inspiration',
+    icon: GiStripedSun,
+    color: '#c34832',
   },
   {
     name: 'Marketing',
