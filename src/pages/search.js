@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
   Heading,
@@ -167,11 +167,18 @@ function SearchResults({ query }) {
 }
 
 export default function SearchPage({ location }) {
-  const query = new URLSearchParams(window.location.search).get('query');
+  const [query, setQuery] = useState(null);
+
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search).get('query');
+
+    if (query) setQuery(query);
+  }, [location.search]);
+
   return (
     <Layout location={location}>
       <Metadata title={titleCase(query)} />
-      <SearchResults query={query} />
+      {query && <SearchResults query={query} />}
     </Layout>
   );
 }
