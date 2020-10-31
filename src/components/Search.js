@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { navigate } from 'gatsby';
 import { useQuery } from 'react-query';
 import { VisuallyHidden } from '@react-aria/visually-hidden';
@@ -34,10 +34,12 @@ export function useSearch(query) {
 
 export default function Search() {
   const [query, setQuery] = useState('');
+  const inputElement = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate(`/search?query=${encodeURIComponent(query)}`);
+    inputElement.current.blur();
   };
 
   useEffect(() => {
@@ -64,6 +66,7 @@ export default function Search() {
         variant="filled"
         onChange={(event) => setQuery(event.target.value)}
         value={query}
+        ref={inputElement}
         isRequired
       />
 
