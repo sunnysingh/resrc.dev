@@ -10,8 +10,9 @@ import {
 } from '@chakra-ui/core';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
-import Logo from './Logo';
 import MaxWidthContainer from './MaxWidthContainer';
+import Search from './Search';
+import Logo from './Logo';
 
 const Container = ({ children }) => {
   return (
@@ -50,28 +51,40 @@ export default function Header({ location }) {
 
   return (
     <Container>
-      <Flex direction={['column', 'row']} align="center">
+      <Flex direction={['column', 'column', 'row']} align="center">
         <div>
           <GatsbyLink to="/">
             <Logo />
           </GatsbyLink>
         </div>
+
+        <Search />
+
         <Flex
           bg="transparent"
           align="center"
           p={[2, 4]}
-          marginLeft={[0, 'auto']}
+          marginLeft={[0, 0, 'auto']}
         >
-          <NavLink to="/" fontSize="2xl" isCurrent={location.pathname === '/'}>
+          <NavLink
+            to="/"
+            fontSize={['xl', '2xl']}
+            isCurrent={location.pathname === '/'}
+          >
             Recent
           </NavLink>
           <NavLink
             to="/categories"
+            fontSize={['xl', '2xl']}
             isCurrent={location.pathname === '/categories'}
           >
             Explore
           </NavLink>
-          <NavLink href="https://sunny.link/resrcsubmit" mr={0}>
+          <NavLink
+            href="https://sunny.link/resrcsubmit"
+            fontSize={['xl', '2xl']}
+            mr={0}
+          >
             Submit
           </NavLink>
           <IconButton

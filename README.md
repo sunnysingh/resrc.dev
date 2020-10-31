@@ -23,3 +23,8 @@ Resrc is built with [Gastby](https://gatsbyjs.org/) and [Chakra UI](https://chak
 1. Install dependencies: `npm install`
 2. Copy env: `cp example.env .env` (set API keys in `.env`)
 3. Launch server: `npm start`
+
+Some functionality such as serverless functions require a Netlify environment. You can set it up by doing:
+
+1. Log in `npm run netlify:login`
+2. Launch server: `npm run netlify:dev`
