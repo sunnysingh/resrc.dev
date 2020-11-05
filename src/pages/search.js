@@ -106,7 +106,7 @@ function SearchResults({ query }) {
               borderWidth="1px"
               rounded="lg"
             >
-              {result.categories && (
+              {result.categories.length !== 0 && (
                 <Box mb={2}>
                   {result.categories.map((categoryName) => {
                     const category = categories.find(

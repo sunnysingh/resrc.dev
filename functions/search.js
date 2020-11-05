@@ -1,4 +1,5 @@
 const Airtable = require('airtable');
+const ImgixClient = require('imgix-core-js');
 
 const AIRTABLE_BASE_ID = 'appxAjT2ITT8Y4zRv';
 const AIRTABLE_TABLE_NAME = 'Resources';
@@ -7,6 +8,23 @@ const AIRTABLE_PAGE_SIZE = 30;
 const RESPONSE_HEADERS = {
   'Content-Type': 'application/json; charset=utf-8',
 };
+
+const imgix = new ImgixClient({
+  domain: 'cdn.sunny.app',
+  secureURLToken: process.env.IMGIX_SECURE_URL_TOKEN,
+});
+
+const getCdnUrl = (url) => imgix.buildURL(url, { w: 500 });
+
+const normalizeAirtableData = (data) => ({
+  id: data.id,
+  name: data.Name,
+  description: data.Description,
+  url: data.URL,
+  categories: data.Category || [],
+  date: data.Date,
+  image: Array.isArray(data.Image) ? getCdnUrl(data.Image[0].url) : null,
+});
 
 exports.handler = async function (event) {
   const { query } = event.queryStringParameters;
@@ -58,14 +76,7 @@ exports.handler = async function (event) {
 
   const results = records.map((record) => ({
     id: record.id,
-    name: record.fields.Name,
-    description: record.fields.Description,
-    url: record.fields.URL,
-    categories: record.fields.Category,
-    created: record.fields.createdTime,
-    image: Array.isArray(record.fields.Image)
-      ? record.fields.Image[0].url
-      : null,
+    ...normalizeAirtableData(record.fields),
   }));
 
   return {

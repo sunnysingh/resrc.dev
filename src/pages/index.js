@@ -22,16 +22,17 @@ export default function RecentPage({ location }) {
   const { allAirtable } = useStaticQuery(
     graphql`
       query {
-        allAirtable(limit: 28, sort: { order: DESC, fields: data___Date }) {
-          nodes {
-            data {
-              Category
-              Date
-              Description
-              Name
-              URL
-              Image {
+        allAirtable(limit: 28, sort: { order: DESC, fields: fields___date }) {
+          edges {
+            node {
+              id
+              fields {
+                categories
+                date
+                description
+                name
                 url
+                image
               }
             }
           }
@@ -56,20 +57,20 @@ export default function RecentPage({ location }) {
       </Flex>
 
       <SimpleGrid minChildWidth="280px" spacing={4}>
-        {allAirtable.nodes.map((node) => (
+        {allAirtable.edges.map(({ node }) => (
           <Box
-            key={node.data.URL}
+            key={node.fields.url}
             as="a"
-            href={node.data.URL}
+            href={node.fields.url}
             target="_blank"
             rel="noopener"
             p={[4, 8]}
             borderWidth="1px"
             rounded="lg"
           >
-            {node.data.Category && (
+            {node.fields.categories && (
               <Box mb={2}>
-                {node.data.Category.map((categoryName) => {
+                {node.fields.categories.map((categoryName) => {
                   const category = categories.find(
                     ({ name }) => name === categoryName
                   );
@@ -109,18 +110,16 @@ export default function RecentPage({ location }) {
               align="center"
               justify="center"
             >
-              {Array.isArray(node.data.Image) && (
-                <Image src={node.data.Image[0].url} alt="" />
-              )}
+              {node.fields.image && <Image src={node.fields.image} alt="" />}
             </Flex>
 
             <FitText>
               <Heading as="h3" mb={4}>
-                {node.data.Name}
+                {node.fields.name}
               </Heading>
             </FitText>
 
-            <Text>{node.data.Description}</Text>
+            <Text>{node.fields.description}</Text>
           </Box>
         ))}
       </SimpleGrid>
