@@ -64,8 +64,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       edge.node.data
     );
 
-    console.log('CATEGORIES', categories);
-
     if (categories.length === 0) return;
 
     categories.forEach((category) => {
