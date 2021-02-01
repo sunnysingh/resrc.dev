@@ -57,7 +57,7 @@ function SearchResults({ query }) {
         <Flex width="100%" justifyContent="center" alignItems="center">
           <Flex alignItems="center" borderWidth="1px" p={8} rounded="lg">
             <Box mr={8}>
-              <Heading mb={8} as="h2" boxSize="lg">
+              <Heading mb={8} as="h2" size="lg">
                 {error.statusCode === 404
                   ? "Hmm... I haven't come across that yet."
                   : error.message}

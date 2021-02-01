@@ -14,10 +14,10 @@ const fetchSearch = async (key, query) => {
   return fetch(
     `${SEARCH_API_ENDPOINT}?query=${encodeURIComponent(query)}`
   ).then(async (response) => {
-    const data = await response.json();
+    const data = await response.json().catch((error) => null);
 
-    if (response.status !== 200) {
-      const error = new Error(data.error || 'Unknown error');
+    if (response.status !== 200 || !data) {
+      const error = new Error(data?.error || 'Unknown error');
       error.statusCode = response.status;
       throw error;
     }
@@ -28,6 +28,7 @@ const fetchSearch = async (key, query) => {
 
 export function useSearch(query) {
   return useQuery(['search', query], fetchSearch, {
+    retry: 1,
     refetchOnWindowFocus: false,
   });
 }
