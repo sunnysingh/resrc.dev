@@ -1,7 +1,7 @@
 <p align="center">
 
   <a href="https://resrc.dev/">
-    <img src="./src/images/resrc-preview.png" alt="Resrc" width="300" />
+    <img src="./static/resrc-preview.png" alt="Resrc" width="300" />
   </a>
 
 </p>

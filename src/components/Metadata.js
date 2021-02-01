@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import previewImage from '../images/resrc-preview.png';
-
 export default function Metadata({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -50,7 +48,7 @@ export default function Metadata({ description, lang, meta, title }) {
         },
         {
           property: 'og:image',
-          content: `https://resrc.dev${previewImage}`,
+          content: `https://resrc.dev/resrc-preview.png`,
         },
         {
           property: 'og:image:width',
@@ -78,7 +76,7 @@ export default function Metadata({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:image',
-          content: `https://resrc.dev${previewImage}`,
+          content: `https://resrc.dev/resrc-preview.png`,
         },
       ].concat(meta)}
     />
