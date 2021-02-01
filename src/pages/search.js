@@ -11,7 +11,7 @@ import {
   Link,
   TagLabel,
   Skeleton,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import FitText from 'react-fittext';
 import { titleCase } from 'voca';
 
@@ -39,7 +39,7 @@ function SearchResults({ query }) {
   return (
     <>
       <Flex mb={[4, 10]} align="center" direction="column">
-        <Heading as="h1" size="xl" mb={4} textAlign="center">
+        <Heading as="h1" boxSize="xl" mb={4} textAlign="center">
           {titleCase(query)} Resources
         </Heading>
       </Flex>
@@ -57,7 +57,7 @@ function SearchResults({ query }) {
         <Flex width="100%" justifyContent="center" alignItems="center">
           <Flex alignItems="center" borderWidth="1px" p={8} rounded="lg">
             <Box mr={8}>
-              <Heading mb={8} as="h2" size="lg">
+              <Heading mb={8} as="h2" boxSize="lg">
                 {error.statusCode === 404
                   ? "Hmm... I haven't come across that yet."
                   : error.message}
@@ -118,7 +118,7 @@ function SearchResults({ query }) {
                         {category.icon && (
                           <Box
                             as={category.icon}
-                            size="24px"
+                            boxSize="24px"
                             ml={-1}
                             mr={2}
                             color={category.color}
@@ -128,7 +128,7 @@ function SearchResults({ query }) {
                         {category.image && (
                           <Avatar
                             src={category.image}
-                            size="xs"
+                            boxSize="xs"
                             ml={-1}
                             mr={2}
                             background="transparent"

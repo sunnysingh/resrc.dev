@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { navigate } from 'gatsby';
 import { useQuery } from 'react-query';
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { Box, Input } from '@chakra-ui/core';
+import { Box, Input } from '@chakra-ui/react';
 
 const SEARCH_API_ENDPOINT = '/.netlify/functions/search';
 

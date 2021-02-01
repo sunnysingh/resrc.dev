@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { QueryCache, ReactQueryCacheProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query-devtools';
-import { Box, Text, Link } from '@chakra-ui/core';
+import { Box, Text, Link } from '@chakra-ui/react';
 
 import Header from './Header';
 import MaxWidthContainer from './MaxWidthContainer';

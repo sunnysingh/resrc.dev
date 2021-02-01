@@ -7,7 +7,7 @@ import {
   IconButton,
   DarkMode,
   useColorMode,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
 import MaxWidthContainer from './MaxWidthContainer';
@@ -92,7 +92,7 @@ export default function Header({ location }) {
             variant="outline"
             size="lg"
             onClick={toggleColorMode}
-            icon={colorMode === 'dark' ? FiMoon : FiSun}
+            icon={colorMode === 'dark' ? <FiMoon /> : <FiSun />}
             aria-label="Change color mode"
           />
         </Flex>

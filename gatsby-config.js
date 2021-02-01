@@ -31,7 +31,7 @@ module.exports = {
         icon: 'src/images/resrc-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-chakra-ui',
+    '@chakra-ui/gatsby-plugin',
     {
       resolve: 'gatsby-source-airtable',
       options: {

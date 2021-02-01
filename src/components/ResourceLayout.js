@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Heading, Box, SimpleGrid, Text, Image } from '@chakra-ui/core';
+import { Flex, Heading, Box, SimpleGrid, Text, Image } from '@chakra-ui/react';
 import FitText from 'react-fittext';
 
 import Layout from './Layout';

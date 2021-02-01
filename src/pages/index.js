@@ -10,7 +10,7 @@ import {
   Tag,
   TagLabel,
   Link,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { useStaticQuery, graphql } from 'gatsby';
 import FitText from 'react-fittext';
 
@@ -80,7 +80,7 @@ export default function RecentPage({ location }) {
                       {category.icon && (
                         <Box
                           as={category.icon}
-                          size="24px"
+                          boxSize="24px"
                           ml={-1}
                           mr={2}
                           color={category.color}
@@ -90,7 +90,7 @@ export default function RecentPage({ location }) {
                       {category.image && (
                         <Avatar
                           src={category.image}
-                          size="xs"
+                          boxSize="xs"
                           ml={-1}
                           mr={2}
                           background="transparent"
