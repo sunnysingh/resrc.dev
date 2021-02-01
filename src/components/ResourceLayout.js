@@ -51,7 +51,12 @@ export default function ResourceLayout({ location, pageContext }) {
             rel="noopener"
             p={[4, 8]}
             borderWidth="1px"
+            borderColor="gray.300"
             rounded="lg"
+            _hover={{
+              borderColor: 'gray.400',
+              transition: 'border-color 200ms ease-in-out',
+            }}
             maxWidth="565px"
           >
             <Flex

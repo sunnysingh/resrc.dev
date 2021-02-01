@@ -32,7 +32,12 @@ export default function CategoriesPage({ location }) {
             to={category.url}
             p={[4, 8]}
             borderWidth="1px"
+            borderColor="gray.300"
             rounded="lg"
+            _hover={{
+              borderColor: 'gray.400',
+              transition: 'border-color 200ms ease-in-out',
+            }}
           >
             <FitText>
               <Heading as="h3" mb={4} textAlign="center">

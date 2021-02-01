@@ -39,7 +39,7 @@ function SearchResults({ query }) {
   return (
     <>
       <Flex mb={[4, 10]} align="center" direction="column">
-        <Heading as="h1" boxSize="xl" mb={4} textAlign="center">
+        <Heading as="h1" size="xl" mb={4} textAlign="center">
           {titleCase(query)} Resources
         </Heading>
       </Flex>
