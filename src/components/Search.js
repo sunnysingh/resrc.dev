@@ -27,10 +27,14 @@ const fetchSearch = async (key, query) => {
 };
 
 export function useSearch(query) {
-  return useQuery(['search', query], fetchSearch, {
-    retry: 1,
-    refetchOnWindowFocus: false,
-  });
+  return useQuery(
+    ['search', query],
+    (context) => fetchSearch(context.queryKey[1], query),
+    {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    }
+  );
 }
 
 export default function Search() {

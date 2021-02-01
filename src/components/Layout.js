@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { QueryCache, ReactQueryCacheProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import { Box, Text, Link } from '@chakra-ui/react';
 
 import Header from './Header';
 import MaxWidthContainer from './MaxWidthContainer';
 
-const queryCache = new QueryCache();
+const queryClient = new QueryClient();
 
 export default function Layout({ location, children }) {
   return (
     <>
-      <ReactQueryCacheProvider queryCache={queryCache}>
+      <QueryClientProvider client={queryClient}>
         <Header location={location} />
 
         <MaxWidthContainer>
@@ -40,7 +40,7 @@ export default function Layout({ location, children }) {
           </Box>
         </MaxWidthContainer>
         <ReactQueryDevtools />
-      </ReactQueryCacheProvider>
+      </QueryClientProvider>
     </>
   );
 }

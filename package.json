@@ -46,7 +46,7 @@
     "react-fittext": "^1.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
-    "react-query": "^2.25.2",
+    "react-query": "^3.6.0",
     "react-query-devtools": "^2.6.3",
     "voca": "^1.4.0",
     "yarn": "^1.22.10"
