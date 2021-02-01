@@ -18,11 +18,14 @@
 
 ## 🚀 Development
 
-Resrc is built with [Gastby](https://gatsbyjs.org/) and [Chakra UI](https://chakra-ui.com/).
+Resrc is built with [Gastby](https://gatsbyjs.org/), [Chakra UI](https://chakra-ui.com/), [React Query](https://react-query.tanstack.com/).
 
-1. Install dependencies: `npm install`
-2. Copy env: `cp example.env .env` (set API keys in `.env`)
-3. Launch server: `npm start`
+Make sure you have [NVM](https://github.com/nvm-sh/nvm#readme) installed.
+
+1. Use Node.js version: `nvm use`
+2. Install dependencies: `npm install`
+3. Copy env: `cp example.env .env` (set API keys in `.env`)
+4. Launch server: `npm start`
 
 Some functionality such as serverless functions require a Netlify environment. You can set it up by doing:
 
