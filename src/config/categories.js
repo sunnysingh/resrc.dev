@@ -6,6 +6,7 @@ import {
   GiBinoculars,
   GiSpellBook,
   GiStripedSun,
+  GiAlienFire,
 } from 'react-icons/gi';
 import { FaTools } from 'react-icons/fa';
 import { GoRepoPush } from 'react-icons/go';
@@ -16,13 +17,9 @@ import {
   Javascript,
   NodeDotJs,
   Visualstudiocode,
-  StyledComponents,
   Github,
-  Eslint,
   Typescript,
 } from '@icons-pack/react-simple-icons';
-
-import EmotionLogo from '../images/emotion-logo.png';
 
 export default [
   {
@@ -72,17 +69,6 @@ export default [
     url: '/vs-code',
     icon: Visualstudiocode,
     color: '#007ACC',
-  },
-  {
-    name: 'Styled Components',
-    url: '/styled-components',
-    icon: StyledComponents,
-    color: '#DB7093',
-  },
-  {
-    name: 'Emotion',
-    url: '/emotion',
-    image: EmotionLogo,
   },
   {
     name: 'Design',
@@ -139,9 +125,9 @@ export default [
     color: '#181717',
   },
   {
-    name: 'ESLint',
-    url: '/eslint',
-    icon: Eslint,
-    color: '#4B32C3',
+    name: 'Upcoming',
+    url: '/upcoming',
+    icon: GiAlienFire,
+    color: '#BD2649',
   },
 ];
