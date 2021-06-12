@@ -9,7 +9,7 @@
     "npm": ">=7.0.3"
   },
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "gatsby build --log-pages",
     "dev": "gatsby develop",
     "netlify:login": "netlify login",
     "netlify:dev": "netlify dev --command='npm run dev'",
