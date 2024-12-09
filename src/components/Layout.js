@@ -2,14 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query-devtools';
-import {
-  Box,
-  Text,
-  Link,
-  Alert,
-  AlertIcon,
-  AlertDescription,
-} from '@chakra-ui/react';
+import { Box, Text, Link } from '@chakra-ui/react';
 
 import Header from './Header';
 import MaxWidthContainer from './MaxWidthContainer';
@@ -20,23 +13,6 @@ export default function Layout({ location, children }) {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Alert
-          status="warning"
-          borderTopWidth={4}
-          borderTopColor="blue.500"
-          d="flex"
-          justifyContent="center"
-          textAlign="center"
-          as="a"
-          href="https://sunnysingh.io/save-ukraine"
-        >
-          <AlertIcon />
-          <AlertDescription>
-            I am Ukrainian and need your help to save my country. Learn about
-            ways to help.
-          </AlertDescription>
-        </Alert>
-
         <Header location={location} />
 
         <MaxWidthContainer>
